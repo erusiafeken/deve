@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - EK WEBS</title>
+  <style>
+    body {
+      background-color: gray;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      color: #333;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1 style="text-align: center; background-color: aquamarine; border-radius: 20px; padding: 20px;">
+    Register for a Website
+  </h1>
+
+  
+
+  
+  <form onsubmit="sendToWhatsApp(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+    <label for="phone">phone:</label>
+    <input type="phone" id="phone" name="phone" required />
+
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+
+  
+    <button type="submit">Register</button>
+  </form>
+  
+  <script>
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+  
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+  
+      // Convert the phone number to international format (Nigeria = +234)
+      const phoneNumber = "2348127096450";
+  
+      const message = `Hello, a new registration:\nName: ${name}\nEmail: ${email}`;
+      const encodedMessage = encodeURIComponent(message);
+  
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+  
+
+  <p style="text-align:center;"><a href="how.html">Back to Home</a></p>
+  <a href="tel:08136422524">08136422524</a>
+  <script>
+    function callNow() {
+      window.location.href = 'tel:08136422524';
+    }
+  </script>
+  <button onclick="callNow()">Call EK WEBS</button>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const contactButtons = document.querySelectorAll('.contact-now');
+      contactButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          window.location.href = 'tel:08136422524'; // or WhatsApp link
+        });
+      });
+    });
+  </script>
+  <button class="contact-now">Contact Now</button>
+
+  
+
+  
+
+</body>
+</html>
+

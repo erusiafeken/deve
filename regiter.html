@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - EK WEBS</title>
+  <style>
+    body {
+      background-color: gray;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      color: #333;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center; background-color: aquamarine; border-radius: 20px; padding: 20px;">
+    Register for a Website
+  </h1>
+
+  <form action="submit.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p style="text-align:center;"><a href="how.html">Back to Home</a></p>
+
+</body>
+</html>
